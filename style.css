@@ -1,0 +1,46 @@
+
+
+@media screen and (max-width: 576px) {
+    .nav-bar{
+        
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .count-sec{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        
+    }
+
+    .hero-sec{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+
+    .main-sec{
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+    .card-section{
+        
+        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+    }
+
+    .history-sec{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}

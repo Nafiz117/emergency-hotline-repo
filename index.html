@@ -9,19 +9,20 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- navbar -->
 
     <header>
-        <div class="mx-auto p-6 flex justify-between items-center">
-            <div class="flex gap-3">
-            <img class="w-15" src="./assets/logo.png" alt="">
+        <div class="nav-bar mx-auto p-6 flex justify-between items-center ">
+            <div class="flex gap-3 ">
+            <img class="w-15 " src="./assets/logo.png" alt="">
             <h2 class="text-[#006747] font-bold text-[15px]">Emergency <br> Service</h2>
         </div>
 
-        <div class="gap-3">
+        <div class="count-sec gap-3">
             <span id="heart-count" class="px-6 py-2 rounded-full bg-[#41FF6B1A] font-bold">0 ❤️</span>
             <span id="coin-count" class="px-6 py-2 rounded-full bg-[#41FF6B1A] font-bold">100 🪙</span>
             <span id="copy-count" class="px-6 py-2 rounded-full bg-[#00A63E] text-white font-semibold">Copy</span>
@@ -35,7 +36,7 @@
 
 
 
-        <section class="max-w-full bg-[linear-gradient(90deg,#013122,#006747_50%,#013223_100%)] flex justify-between items-center p-6 shadow-sm">
+        <section class="hero-sec max-w-full bg-[linear-gradient(90deg,#013122,#006747_50%,#013223_100%)] flex justify-between items-center p-6 shadow-sm">
         <div class="mx-auto ">
             <div class="flex gap-3 flex-col items-center  p-6">
             <img class="w-15" src="./assets/logo.png" alt="">
@@ -50,15 +51,15 @@
 
     </header>
 
-    <main class="bg-[#f5fff6] max-w-full flex mt-8">
+    <main class="main-sec bg-[#f5fff6] max-w-full flex mt-8">
         
         <!-- card section -->
 
 
-        <section class="w-10/12 ">
+        <section class=" w-full  ">
 
         <!-- card-1 -->
-         <section class="col-span-9 grid grid-cols-3 gap-1">
+         <section class="card-section col-span-9 grid grid-cols-3 gap-1">
 
             <div class=" p-5 m-5 bg-white shadow-sm rounded-xl  ">
                 <div class="flex justify-between items-center mb-2">
@@ -313,7 +314,7 @@
             
         </section>
 
-        <aside class="mt-6 h-[850px] bg-white  p-6 w-1/7 rounded-xl shadow-sm flex flex-col">
+        <aside class="history-sec mt-6 h-[850px] bg-white  p-6 rounded-xl shadow-sm flex flex-col">
             <div class=" flex justify-between gap-5 ">
                 <p class="font-semibold"><i class="fa-regular fa-clock"></i>Call History</p>
                 <button id="clear-btn" class="mb-5 w-15 h-8 rounded bg-green-500 text-white">Clear</button>
