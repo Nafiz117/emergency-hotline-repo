@@ -19,7 +19,9 @@
     }
 
     .hero-sec{
-        width: 100%;
+        width: 100vw;
+        box-sizing: border-box;
+    
         flex-direction: column;
         text-align: center;
         gap: 15px;
