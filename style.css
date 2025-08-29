@@ -34,8 +34,8 @@
         gap: 0;
     }
     .card-section{
-        
-        
+        width: 100vw;
+        overflow: hidden;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin: auto;
