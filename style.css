@@ -34,15 +34,15 @@
         gap: 0;
     }
     .card-section{
-        width: 100vw;
-        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        margin: auto;
+        
     }
 
     .history-sec{
-        width: 100vw;
+        width: 100%;
         margin-top: 20px;
     }
 
