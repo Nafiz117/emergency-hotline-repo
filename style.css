@@ -1,6 +1,3 @@
- 
-
-
 @media screen and (max-width: 576px) {
     .nav-bar{
         
@@ -19,27 +16,32 @@
     }
 
     .hero-sec{
-        width: 100vw;
-        box-sizing: border-box;
-    
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0;                 /* remove side gaps */
+        padding: 1rem;             /* comfortable inner spacing */
+        box-sizing: border-box;    
+        border-radius: 10px;       /* keep rounded corners, adjust if desired */
+        left: 0;
     }
-    
+
+    /* ensure the main container doesn't add extra horizontal padding */
+    .main-sec, .card-section {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 
     .main-sec{
-        width: 100vw;
+        width: 100%;
         flex-direction: column;
         gap: 0;
     }
     .card-section{
-        width: 100%;
-        box-sizing: border-box;
+        
+        
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        left: 0;
-        
+        margin: auto;
     }
 
     .history-sec{
@@ -47,23 +49,22 @@
         margin-top: 20px;
     }
 
-    }
-    
-    #call-history {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-    
-    #call-history li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.75rem;
-    }
-    
-    #call-history li .call-time {
-        white-space: nowrap;
-        display: inline-block;
-        
-    }
+}
+
+#call-history {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#call-history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#call-history li .call-time {
+    white-space: nowrap;
+    display: inline-block;
+}
