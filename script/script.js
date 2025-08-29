@@ -39,7 +39,7 @@ for (let i = 0; i < callBtns.length; i++){
 
         else {
             coins -= 20;
-            coinCount.innerText = coins + " 🪙";
+            coinCount.innerText = coins + "🪙";
             alert(`📞Calling ${helpService} ${serviceNumber} `);
         }
     });}
@@ -86,9 +86,7 @@ for (let i = 0; i < callBtns.length; i++){
             timeSpan.innerText = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second:'2-digit', hour12: true });
 
             listItem.appendChild(leftDiv);
-            listItem.appendChild(timeSpan);
-
-            
+            listItem.appendChild(timeSpan);      
             callHistoryList.prepend(listItem);
         });
     }
@@ -121,6 +119,7 @@ for (let i = 0; i < callBtns.length; i++){
         const serviceNumber = card ? card.querySelector('.service-number') : null;
         if (serviceNumber) {
             navigator.clipboard.writeText(serviceNumber.innerText).then(() => {
+                alert('Service number copied to clipboard!');
                 copyBtns[i].innerText = "Copied!";
                 setTimeout(() => {
                     copyBtns[i].innerText = "Copy";
