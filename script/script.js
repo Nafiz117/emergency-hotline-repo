@@ -45,6 +45,10 @@ for (let i = 0; i < callBtns.length; i++){
     });}
 
 
+
+
+
+
     // call history functionality
 
     const callingBtns = document.getElementsByClassName('call-btn');
@@ -57,50 +61,38 @@ for (let i = 0; i < callBtns.length; i++){
             const serviceNumber = serviceNumbers[i].innerText;
 
             if (coins < 20) {
-                return; 
+                return;
             }
 
-            else {
-               
-                
-                const listItem = document.createElement('li');
-                listItem.className = 'flex flex-col p-2 rounded-xl m-3 bg-gray-100 border-none';
-                
+            const listItem = document.createElement('li');
+            
+            listItem.className = 'flex justify-between items-center p-2 rounded-xl m-3 bg-gray-100 border-none';
 
-                const name1 = document.createElement('span');
-                name1.className = 'font-bold';
-                name1.innerText = serviceName;
-                
-                listItem.innerText = `${serviceName}`;
+            // left: name (top) and number (below)
+            const leftDiv = document.createElement('div');
+            leftDiv.className = 'flex flex-col items-start';
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'font-bold';
+            nameSpan.innerText = serviceName;
+            const numberSpan = document.createElement('span');
+            numberSpan.className = 'text-sm text-gray-500';
+            numberSpan.innerText = serviceNumber;
+            leftDiv.appendChild(nameSpan);
+            leftDiv.appendChild(numberSpan);
 
-                // for number
-                const number1 = document.createElement('span');
-                number1.className = 'text-sm text-gray-500';
-                number1.innerText = serviceNumber;
-                listItem.appendChild(number1);
+            // right: time
+            const timeSpan = document.createElement('span');
+            timeSpan.className = 'text-sm text-gray-500 call-time';
+            timeSpan.innerText = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second:'2-digit', hour12: true });
 
-                // for time
-                const time1 = document.createElement('span');
-                time1.className = 'flex justify-between text-x text-gray-500';
-                
-                
-                time1.innerText = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second:'2-digit' , hour12: true });
-
-                listItem.appendChild(time1); 
-                
-                
-
-    
-               
-
-                callHistoryList.appendChild(listItem);
-            }
+            listItem.appendChild(leftDiv);
+            listItem.appendChild(timeSpan);
 
             
-
-            
+            callHistoryList.prepend(listItem);
         });
     }
+
     
 
     // clear button functionality
@@ -113,9 +105,6 @@ for (let i = 0; i < callBtns.length; i++){
 
     // copy button functionality
 
-
-
-    
 
 
     const copyBtns = document.getElementsByClassName('copy-btn');

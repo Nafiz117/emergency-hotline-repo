@@ -1,3 +1,4 @@
+ 
 
 
 @media screen and (max-width: 576px) {
@@ -43,4 +44,22 @@
         margin-top: 20px;
     }
 
-}
+    }
+    
+    #call-history {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    #call-history li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    #call-history li .call-time {
+        white-space: nowrap;
+        display: inline-block;
+    }
