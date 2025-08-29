@@ -29,7 +29,7 @@
     
 
     .main-sec{
-        width: 100%;
+        width: 100vw;
         flex-direction: column;
         gap: 0;
     }
@@ -42,7 +42,7 @@
     }
 
     .history-sec{
-        width: 100%;
+        width: 100vw;
         margin-top: 20px;
     }
 
